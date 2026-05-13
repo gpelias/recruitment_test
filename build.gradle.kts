@@ -31,7 +31,6 @@ dependencies {
     implementation("org.checkerframework:checker-qual:4.1.0")
     implementation("com.github.ben-manes.caffeine:caffeine:3.2.4")
 
-
     compileOnly("org.projectlombok:lombok")
 
     developmentOnly("org.springframework.boot:spring-boot-devtools")
