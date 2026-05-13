@@ -12,7 +12,7 @@ FROM public.ecr.aws/amazoncorretto/amazoncorretto:25
 
 WORKDIR /app
 
-COPY --from=builder /app/build/libs/*-SNAPSHOT.jar app.jar
+COPY --from=builder /app/build/libs/*.jar app.jar
 
 ENV BANDS_URL="https://bands-api.vercel.app/api"
 ENV TZ="America/Sao_Paulo"
