@@ -2,6 +2,11 @@
 
 This repository contains the backend implementation for the DWS technical test. The application is a RESTful API built to integrate with an external provider, apply business rules, and deliver optimized data to front-end clients.
 
+## 🌐 Live Demo & Documentation
+The application is deployed and available for testing at the following links:
+* **Live API:** [https://recruitment-test-c6rj.onrender.com/](https://recruitment-test-c6rj.onrender.com/)
+* **Swagger UI (Interactive Docs):** [https://recruitment-test-c6rj.onrender.com/swagger-ui/index.html#/](https://recruitment-test-c6rj.onrender.com/swagger-ui/index.html#/)
+
 ## 🚀 Tech Stack & Core Decisions
 * **Java 25 & Spring Boot 4**: Leveraging the latest features and performance improvements.
 * **OpenFeign**: Clean and declarative integration with the external Vercel API.
