@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.dws"
-version = "0.0.1-SNAPSHOT"
+version = "1.0.0"
 description = "recruitment_test"
 
 java {
@@ -26,14 +26,26 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-webmvc")
     implementation("org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j")
     implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:3.0.3")
+
+    implementation("org.checkerframework:checker-qual:4.1.0")
+    implementation("com.github.ben-manes.caffeine:caffeine:3.2.4")
+
+
     compileOnly("org.projectlombok:lombok")
+
     developmentOnly("org.springframework.boot:spring-boot-devtools")
+
     annotationProcessor("org.projectlombok:lombok")
+
     testImplementation("org.springframework.boot:spring-boot-starter-actuator-test")
     testImplementation("org.springframework.boot:spring-boot-starter-security-test")
     testImplementation("org.springframework.boot:spring-boot-starter-webmvc-test")
+
     testCompileOnly("org.projectlombok:lombok")
+
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
     testAnnotationProcessor("org.projectlombok:lombok")
 }
 

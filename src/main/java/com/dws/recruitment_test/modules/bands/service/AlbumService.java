@@ -1,7 +1,7 @@
 package com.dws.recruitment_test.modules.bands.service;
 
 import com.dws.recruitment_test.cache.ListCacheService;
-import com.dws.recruitment_test.modules.bands.dto.Band;
+import com.dws.recruitment_test.modules.bands.dto.Album;
 import com.dws.recruitment_test.modules.bands.integration.BandsIntegration;
 import com.dws.recruitment_test.utils.FilterUtils;
 import lombok.RequiredArgsConstructor;
@@ -13,22 +13,22 @@ import java.util.UUID;
 
 @RequiredArgsConstructor
 @Service
-public class BandsService {
+public class AlbumService {
 
     private final BandsIntegration bandsIntegration;
 
-    private final ListCacheService<Band> listCacheService;
+    private final ListCacheService<Album> listCacheService;
 
     private final FilterUtils filterUtils;
 
-    public List<Band> getBands(Map<String, String> params) {
-        return filterUtils.getList(params, listCacheService.get("bands", (_) -> bandsIntegration.getBands()).stream());
+    public List<Album> getAlbums(Map<String, String> params) {
+        return filterUtils.getList(params, listCacheService.get("albums", (_) -> bandsIntegration.getAlbums()).stream());
     }
 
-    public Band getBandById(UUID id) {
-        return listCacheService.get("bands", (_) -> bandsIntegration.getBands())
+    public Album getAlbumById(UUID id) {
+        return listCacheService.get("albums", (_) -> bandsIntegration.getAlbums())
                 .stream()
-                .filter(band -> id.equals(band.id()))
+                .filter(album -> id.equals(album.id()))
                 .findFirst()
                 .orElse(null);
     }
