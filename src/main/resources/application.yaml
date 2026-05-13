@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: recruitment_test
+
+  main:
+    allow-bean-definition-overriding: true
+
+  cloud:
+    openfeign:
+      circuitbreaker:
+        enabled: true
+      client:
+        config:
+          bands:
+            url: ${BANDS_URL}
