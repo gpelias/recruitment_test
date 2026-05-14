@@ -13,8 +13,8 @@ public record Album(
         @Schema(description = "Album title", example = "OK Computer")
         String name,
 
-        @Schema(description = "Release date of the album", example = "1997-05-21")
-        LocalDate releaseDate,
+        @Schema(description = "Release date of the album", example = "1988-10-07T10:34:21.080Z")
+        String releaseDate,
 
         @Schema(description = "URL of the album cover image", example = "https://example.com/cover.jpg")
         String image,

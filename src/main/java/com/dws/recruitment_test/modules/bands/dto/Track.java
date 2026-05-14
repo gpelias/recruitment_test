@@ -12,9 +12,6 @@ public record Track(
         String name,
 
         @Schema(description = "Duration of the track", example = "223")
-        String duration,
-
-        @Schema(description = "ID of the album this track belongs to", example = "3fa85f64-5717-4562-b3fc-2c963f66afa6")
-        UUID album
+        String duration
 ) {
 }

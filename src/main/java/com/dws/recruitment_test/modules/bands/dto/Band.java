@@ -18,6 +18,9 @@ public record Band(
         @Schema(description = "Musical genre", example = "Alternative Rock")
         String genre,
 
+        @Schema(description = "Biography")
+        String biography,
+
         @Schema(description = "Total number of plays", example = "284212")
         Long numPlays,
 
