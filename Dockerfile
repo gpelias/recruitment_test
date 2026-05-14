@@ -17,6 +17,6 @@ COPY --from=builder /app/build/libs/*.jar app.jar
 ENV BANDS_URL="https://bands-api.vercel.app/api"
 ENV TZ="America/Sao_Paulo"
 
-EXPOSE 10000
+EXPOSE 8080
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
