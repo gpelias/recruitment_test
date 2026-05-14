@@ -14,6 +14,8 @@ WORKDIR /app
 
 COPY --from=builder /app/build/libs/*.jar app.jar
 
+ENV ADDRESS="0.0.0.0"
+ENV PORT="8080"
 ENV BANDS_URL="https://bands-api.vercel.app/api"
 ENV TZ="America/Sao_Paulo"
 

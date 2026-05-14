@@ -1,3 +1,7 @@
+server:
+  address: ${ADDRESS}
+  port: ${PORT}
+
 spring:
   application:
     name: recruitment_test

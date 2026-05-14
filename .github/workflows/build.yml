@@ -26,8 +26,9 @@ jobs:
 
       - name: Build and Test with Gradle
         env:
-          BANDS_URL: ${{ secrets.BANDS_URL }}
+          ADDRESS: ${{ secrets.ADDRESS }}
           PORT: ${{ secrets.PORT }}
+          BANDS_URL: ${{ secrets.BANDS_URL }}
         run: gradle build --no-daemon
 
       - name: Trigger Deploy on Render
